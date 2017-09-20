@@ -7,7 +7,8 @@ MAINTAINER zhangzhuang
    
 # 安装openssh-server和sudo软件包，并且将sshd的UsePAM参数设置成no  
 RUN yum install -y openssh-server sudo  wget 
-RUN wget /P /opt/software/ http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz  && \
+RUN mkdir  /opt/software/   && \
+    wget /P /opt/software/ http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz  && \
     wget /P /opt/software/ hhttp://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.4/hadoop-2.7.4.tar.gz  && \
     wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz  && \
     wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz  && \

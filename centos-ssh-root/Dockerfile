@@ -7,18 +7,19 @@ MAINTAINER zhangzhuang
    
 # 安装openssh-server和sudo软件包，并且将sshd的UsePAM参数设置成no  
 RUN yum install -y openssh-server sudo  wget 
-RUN mkdir  /opt/software/   && \
-    wget /P /opt/software/ http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz  && \
-    wget /P /opt/software/ hhttp://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.4/hadoop-2.7.4.tar.gz  && \
-    wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz  && \
-    wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz  && \
-    wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz  && \
-    wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.0.1-bin-hadoop2.7.tgz  && \
-    wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-hadoop2.7.tgz  && \
-    wget /P /opt/software/ http://mirrors.hust.edu.cn/apache/hive/hive-2.3.0/apache-hive-2.3.0-bin.tar.gz  && \
-    wget /P /opt/software/ http://mirrors.hust.edu.cn/apache/hive/hive-2.2.0/apache-hive-2.2.0-bin.tar.gz  && \
-    wget /P /opt/software/ http://mirrors.hust.edu.cn/apache/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz  && \
-    wget /P /opt/software/ http://mirrors.hust.edu.cn/apache/hive/hive-1.2.2/apache-hive-1.2.2-bin.tar.gz
+RUN mkdir  /opt/software/
+RUN cd  /opt/software/   
+ RUN    wget /P /opt/software/ http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz 
+RUN     wget /P /opt/software/ hhttp://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.4/hadoop-2.7.4.tar.gz  
+RUN     wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz  
+RUN     wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz 
+RUN     wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz 
+RUN     wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.0.1-bin-hadoop2.7.tgz  
+RUN     wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-hadoop2.7.tgz 
+RUN     wget /P /opt/software/ http://mirrors.hust.edu.cn/apache/hive/hive-2.3.0/apache-hive-2.3.0-bin.tar.gz 
+RUN     wget /P /opt/software/ http://mirrors.hust.edu.cn/apache/hive/hive-2.2.0/apache-hive-2.2.0-bin.tar.gz  
+RUN     wget /P /opt/software/ http://mirrors.hust.edu.cn/apache/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz  
+RUN     wget /P /opt/software/ http://mirrors.hust.edu.cn/apache/hive/hive-1.2.2/apache-hive-1.2.2-bin.tar.gz
     
 RUN sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config  
 #安装openssh-clients

@@ -9,8 +9,8 @@ MAINTAINER zhangzhuang
 RUN yum install -y openssh-server sudo  wget 
 RUN mkdir  /opt/software/
 RUN cd  /opt/software/   
- RUN    wget /P /opt/software/ http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz 
-RUN     wget /P /opt/software/ hhttp://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.4/hadoop-2.7.4.tar.gz  
+ RUN    wget /P /opt/software/ http://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz 
+RUN     wget /P /opt/software/ http://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-2.7.4/hadoop-2.7.4.tar.gz  
 RUN     wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz  
 RUN     wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz 
 RUN     wget /P /opt/software/ https://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz 

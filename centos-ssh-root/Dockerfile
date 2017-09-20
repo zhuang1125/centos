@@ -3,7 +3,7 @@
 FROM centos
    
 # 镜像的作者  
-MAINTAINER stephenlu 
+MAINTAINER zhangzhuang 
    
 # 安装openssh-server和sudo软件包，并且将sshd的UsePAM参数设置成no  
 RUN yum install -y openssh-server sudo  

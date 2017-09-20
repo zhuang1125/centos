@@ -6,7 +6,7 @@ FROM centos
 MAINTAINER zhangzhuang 
    
 # 安装openssh-server和sudo软件包，并且将sshd的UsePAM参数设置成no  
-RUN yum install -y openssh-server sudo  
+RUN yum install -y openssh-server sudo  wget 
 RUN sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config  
 #安装openssh-clients
 RUN yum  install -y openssh-clients

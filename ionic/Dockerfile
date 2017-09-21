@@ -6,5 +6,7 @@ RUN mkdir  /opt/apps/  && \
     ionic start myApp01 blank && \
     ionic start myApp02 tabs  && \
     ionic start myApp03 sidemenu  && \
-    cd myApp  && \
-    ionic serve
+    cd myApp03  && \
+    ionic cordova platform add android  && \
+    ionic cordova build android 
+    

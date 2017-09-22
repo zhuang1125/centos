@@ -1,8 +1,7 @@
 From beevelop/ionic
 
 MAINTAINER zhangzhuang 
-RUN apt-get -qq install -y vim  && \
-    mkdir  /opt/apps/  && \
+RUN  mkdir  /opt/apps/  && \
     cd /opt/apps  && \
     ionic start myApp01 blank && \
     ionic start myApp02 tabs  && \
@@ -11,3 +10,4 @@ RUN apt-get -qq install -y vim  && \
     ionic cordova platform add android  && \
     ionic cordova build android 
     
+RUN apt-get -qq install -y vim      

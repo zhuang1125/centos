@@ -10,4 +10,4 @@ RUN  mkdir  /opt/apps/  && \
     ionic cordova platform add android  && \
     ionic cordova build android 
     
-RUN apt-get -qq install -y vim      
+#RUN apt-get -qq install -y vim      

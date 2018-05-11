@@ -22,7 +22,7 @@ RUN    wget /P /opt/software/ https://download.epicgames.com/Builds/UnrealEngine
 #RUN     wget /P /opt/software/ http://mirrors.hust.edu.cn/apache/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz  
 #RUN     wget /P /opt/software/ http://mirrors.hust.edu.cn/apache/hive/hive-1.2.2/apache-hive-1.2.2-bin.tar.gz
     
- sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config   && \
+# sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config   && \
 #安装openssh-clients
  yum  install -y openssh-clients  && \
    

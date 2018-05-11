@@ -6,7 +6,7 @@ FROM centos
 MAINTAINER zhangzhuang 
    
 # 安装openssh-server和sudo软件包，并且将sshd的UsePAM参数设置成no  
-RUN yum install -y openssh-server sudo  wget && \
+RUN yum install -y openssh-server 
 RUN mkdir  /opt/software/
 RUN cd  /opt/software/   
 RUN    wget /P /opt/software/ https://download.epicgames.com/Builds/UnrealEngineLauncher/Installers/EpicGamesLauncherInstaller-2.12.19-3269887.msi
